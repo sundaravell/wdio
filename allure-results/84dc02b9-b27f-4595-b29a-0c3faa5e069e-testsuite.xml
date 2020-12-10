@@ -1,0 +1,61 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1607602687620' stop='1607602696205'>
+    <name>Launch Application</name>
+    <title>Launch Application</title>
+    <test-cases>
+        <test-case start='1607602687621' status='passed' stop='1607602692185'>
+            <name>Launch 1</name>
+            <title>Launch 1</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-86.0.4240.75'/>
+            </parameters>
+            <steps>
+                <step start='1607602687635' status='passed' stop='1607602689171'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='030a5a60-3b50-41b6-9000-92c629b006e1-attachment.json' type='application/json' size='36'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1607602692187' status='passed' stop='1607602696204'>
+            <name>Launch 2</name>
+            <title>Launch 2</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-86.0.4240.75'/>
+            </parameters>
+            <steps>
+                <step start='1607602692194' status='passed' stop='1607602693045'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='add904fe-3d00-49f6-a390-01180da98d20-attachment.json' type='application/json' size='36'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1607602696048' status='passed' stop='1607602696202'>
+                    <name>POST /session/:sessionId/window/maximize</name>
+                    <title>POST /session/:sessionId/window/maximize</title>
+                    <attachments>
+                        <attachment title='Response' source='3d051fb3-2567-4f0d-b5e8-97da77c13eaa-attachment.json' type='application/json' size='58'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Launch_Application" timestamp="2020-12-10T18:03:40" time="8.351" tests="2" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Launch Application"/>
+      <property name="capabilities" value="chrome.86_0_4240_75.windows"/>
+      <property name="file" value=".\test\test.js"/>
+    </properties>
+    <testcase classname="chrome.86_0_4240_75.windows.Launch_Application" name="Launch_1" time="3.841">
+      <system-out>
+        <![CDATA[
+COMMAND: POST /session/ddc4b06179466baaa0a16e6a06ff6cdb/url - {"url":"https://webdriver.io/"}
+RESULT: {"url":"https://webdriver.io/"}
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="chrome.86_0_4240_75.windows.Launch_Application" name="Launch_2" time="4.506">
+      <system-out>
+        <![CDATA[
+COMMAND: POST /session/ddc4b06179466baaa0a16e6a06ff6cdb/url - {"url":"https://webdriver.io/"}
+RESULT: {"url":"https://webdriver.io/"}
+COMMAND: POST /session/ddc4b06179466baaa0a16e6a06ff6cdb/window/maximize - {}
+RESULT: {}
+COMMAND: DELETE /session/ddc4b06179466baaa0a16e6a06ff6cdb - {}
+RESULT: {}
+]]>
+      </system-out>
+    </testcase>
+  </testsuite>
+</testsuites>
