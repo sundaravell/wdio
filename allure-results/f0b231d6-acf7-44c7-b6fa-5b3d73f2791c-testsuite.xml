@@ -1,0 +1,53 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1607601305672' stop='1607601317701'>
+    <name>Launch Application</name>
+    <title>Launch Application</title>
+    <test-cases>
+        <test-case start='1607601305673' status='passed' stop='1607601313471'>
+            <name>Launch 1</name>
+            <title>Launch 1</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-86.0.4240.75'/>
+            </parameters>
+            <steps>
+                <step start='1607601305689' status='passed' stop='1607601310459'>
+                    <name>navigateTo</name>
+                    <title>navigateTo</title>
+                    <attachments>
+                        <attachment title='Request' source='74917932-3570-4221-9781-a1b377f88f5e-attachment.json' type='application/json' size='36'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1607601313473' status='passed' stop='1607601317699'>
+            <name>Launch 2</name>
+            <title>Launch 2</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-86.0.4240.75'/>
+            </parameters>
+            <steps>
+                <step start='1607601313481' status='passed' stop='1607601314683'>
+                    <name>navigateTo</name>
+                    <title>navigateTo</title>
+                    <attachments>
+                        <attachment title='Request' source='e7b445f2-5f6c-4fc4-bf0c-5356f0e7eb92-attachment.json' type='application/json' size='36'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

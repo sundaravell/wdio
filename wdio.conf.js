@@ -107,7 +107,7 @@ exports.config = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     services: ['chromedriver'],
-    
+    //services: ['selenium-standalone'],
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: https://webdriver.io/docs/frameworks.html
@@ -128,7 +128,25 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
-    reporters: ['spec',['allure', {outputDir: 'allure-results'}]],
+    reporters: [
+        [
+            'junit',
+            {
+                outputDir: './report',
+                outputFileFormat: function (options) {
+                    return `results-${new Date().getTime()}.xml`;
+                },
+            },
+        ],
+        [
+            'allure',
+            {
+                outputDir: 'allure-results',
+            },
+        ],
+    ],
+
+//    reporters: ['spec',['allure', {outputDir: 'allure-results'}]],
 
 
     
