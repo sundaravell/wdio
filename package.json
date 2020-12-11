@@ -17,7 +17,7 @@
     "@wdio/spec-reporter": "^6.8.1",
     "@wdio/sync": "^6.10.0",
     "chromedriver": "^83.0.0",
-    "chromium-binary": "^83.0.4103-116",
+    "chromium": "^3.0.2",
     "wdio-chromedriver-service": "^6.0.4",
     "webdriverio": "^6.10.0"
   },
