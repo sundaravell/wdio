@@ -46,18 +46,18 @@ exports.config = {
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
     capabilities: [{
-    
+
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
         maxInstances: 5,
         //
         browserName: 'chrome',
-        //'goog:chromeOptions': {
-            // to run chrome headless the following flags are required
-            // (see https://developers.google.com/web/updates/2017/04/headless-chrome)
-          //    args: ['--headless', '--disable-gpu'],
-            //},
+        'goog:chromeOptions': {
+        // to run chrome headless the following flags are required
+        // (see https://developers.google.com/web/updates/2017/04/headless-chrome)
+            args: ['--headless', '--disable-gpu','--window-size=1920,1080'],
+        },
         acceptInsecureCerts: true
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
@@ -133,14 +133,14 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
-    reporters: ['dot','junit'],
-        reporterOptions:
+    reporters: [
+        ['allure',
             {
-                junit: {
-                    outputDir: './report'
-                }
+                outputDir: 'allure-results',
             },
-//    reporters: ['spec',['allure', {outputDir: 'allure-results'}]],
+        ],
+    ],
+    //    reporters: ['spec',['allure', {outputDir: 'allure-results'}]],
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
@@ -225,8 +225,8 @@ exports.config = {
     /**
      * Function to be executed after a test (in Mocha/Jasmine).
      */
-    afterTest: function(test, context, { error, result, duration, passed, retries }) {
-        if (!passed) {
+    afterTest: function (test, context, { error, result, duration, passed, retries }) {
+        if (error) {
             browser.takeScreenshot();
         }
     },
