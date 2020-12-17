@@ -1,3 +1,7 @@
+let gui = process.env.GUI
+
+let headless = "'chrome','goog:chromeOptions': {args: ['--headless', '--disable-gpu'],},"
+
 exports.config = {
     //
     // ====================
@@ -52,12 +56,13 @@ exports.config = {
         // 5 instances get started at a time.
         maxInstances: 5,
         //
-        browserName: 'chrome',
+        browserName: gui === true ? 'chrome' : headless,
+        /*browserName: 'chrome',
         'goog:chromeOptions': {
         // to run chrome headless the following flags are required
         // (see https://developers.google.com/web/updates/2017/04/headless-chrome)
             args: ['--headless', '--disable-gpu','--window-size=1920,1080'],
-        },
+        },*/
         acceptInsecureCerts: true
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
