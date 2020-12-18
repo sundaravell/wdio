@@ -58,14 +58,8 @@ exports.config = {
         'goog:chromeOptions': gui === "true" ? {} :
 
             {
-                args: ['--headless', '--disable-gpu','--window-size=1920,1080'],
+                args: ['--headless', '--disable-gpu', '--window-size=1920,1080'],
             },
-        /*browserName: 'chrome',
-        'goog:chromeOptions': {
-        // to run chrome headless the following flags are required
-        // (see https://developers.google.com/web/updates/2017/04/headless-chrome)
-            args: ['--headless', '--disable-gpu','--window-size=1920,1080'],
-        },*/
         acceptInsecureCerts: true
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
