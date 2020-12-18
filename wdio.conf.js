@@ -1,6 +1,4 @@
-let gui = process.env.GUI
-
-let noHeadless = 'chrome'
+let gui = process.env.gui;
 
 exports.config = {
     //
@@ -56,10 +54,12 @@ exports.config = {
         // 5 instances get started at a time.
         maxInstances: 5,
         //
-        browserName: gui === true ? noHeadless : 'chrome',
-        'goog:chromeOptions': {
-            args: ['--headless', '--disable-gpu'],
-        },
+        browserName: 'chrome',
+        'goog:chromeOptions': gui === "true" ? {} :
+
+            {
+                args: ['--headless', '--disable-gpu','--window-size=1920,1080'],
+            },
         /*browserName: 'chrome',
         'goog:chromeOptions': {
         // to run chrome headless the following flags are required
